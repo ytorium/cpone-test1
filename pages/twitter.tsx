@@ -6,11 +6,16 @@ export default function Twitter() {
   console.log("user1");
   const twitterClient = new TwitterApi('6lzVZHTWWEaqocAewMyhNFdmL');
   const readOnlyClient = twitterClient.readOnly;
-  //async function example() {
-  //  const user = await readOnlyClient.v2.userByUsername('YToimich');
-  //  console.log(user);
-  //}
+  async function getUser() {
+    const user = await readOnlyClient.v2.userByUsername('YToimich');
+    console.log(user);
+    return user
+  }
   console.log("user2");
+
+  // const userInfo = getUser()
+
+  console.log(getUser());
 
   return (
     <Layout>
