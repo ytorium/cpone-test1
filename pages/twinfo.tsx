@@ -1,5 +1,6 @@
 import { fetchUser } from "../service/twitter"
 
+/*
 function TwitterCard(props : any) {
   let profileImageURL = props.twitterInfo.profileImageURL.replace(/_normal/g, "");
 
@@ -19,10 +20,16 @@ function TwitterCard(props : any) {
     </div>
   )
 }
+*/
 
 export default function Twinfo(props : any) {
+  console.log("step1")
   let twitterHandle = "YToimich"
-  const userResponse = await fetchUser(twitterHandle)
+  try {
+    const userResponse = fetchUser(twitterHandle)
+  } catch (error) {
+    console.log("error")
+  }
 
   return (
     <div>
