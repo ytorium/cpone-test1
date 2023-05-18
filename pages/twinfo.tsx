@@ -21,19 +21,19 @@ function TwitterCard(props : any) {
 }
 
 export default function Twinfo(props : any) {
-return (
+  let twitterHandle = "YToimich"
+  const userResponse = await fetchUser(twitterHandle)
+
+  return (
     <div>
       <h2>Twitter Card</h2>
 
-      <div>
-        {
-          (!props.twitterInfo)? <p>Couldnt fetch information from Twitter</p>: <TwitterCard twitterInfo={props.twitterInfo} />
-        }
-      </div>
+
     </div>
   )
 }
 
+/*
 export async function getServerSideProps(context : any) {
   let twitterHandle = "YToimich"
   let twitterInfo = null
@@ -53,3 +53,4 @@ export async function getServerSideProps(context : any) {
     },
   }
 }
+*/

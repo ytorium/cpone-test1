@@ -9,7 +9,6 @@ export default function Middle() {
 
   return (
     <div className={styles.signedInStatus}>
-
     {session?.user && (
      <>
        <Link href="/twinfo">
@@ -21,10 +20,10 @@ export default function Middle() {
        </Link>
 
        <Link href="https://cpone-starmint.vercel.app">
-         <p>Step 3: NFT Endorsement Minting &rarr;</p>
+         <p>Step 3: NFT Minting with Endorsement &rarr;</p>
        </Link>
      </>
      )}
-  </div>
+    </div>
   )
 }
